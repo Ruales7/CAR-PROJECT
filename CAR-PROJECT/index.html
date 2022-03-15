@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Usando o CANVAS </title>
+		<meta name="viewoprt" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Ruales e Ranier"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		
+	</head>
+    <body>
+        <canvas id="rrcar" width="1900" height="945 "></canvas>
+    </body>
+    <script type="text/javascript">
+
+    var canvas= document.getElementById('rrcar');
+	var ctx= canvas.getContext('2d');
+
+    			
+
+    ctx.fillStyle='#4f93db';
+	ctx.beginPath();
+	ctx.fillRect(0,0,1900,350);
+	ctx.stroke();
+	ctx.fill();
+
+    //ctx.fillStyle='black';
+	//ctx.beginPath();
+	//ctx.fillRect(800,350,300,650);
+	//ctx.stroke();
+	//ctx.fill();
+
+    ctx.strokeStyle = 'orange';
+    ctx.fillStyle= 'yellow';
+    ctx.beginPath();
+	ctx.arc(950,290,195,0,2*3.14);
+	ctx.stroke();
+	ctx.fill();
+
+    ctx.fillStyle='green';
+	ctx.beginPath();
+	ctx.fillRect(0,350,1900,945);
+	ctx.strokeRect(0,350,1900,945);
+
+
+    ctx.fillStyle='black';
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.moveTo(850,350);
+    ctx.lineTo(300,950);
+    
+    ctx.lineTo(1600,950);
+    
+    ctx.lineTo(1050,350);
+    
+    ctx.lineTo(1050,350);
+    ctx.stroke();
+    ctx.fill();
+
+
+    </script>
+</html>
