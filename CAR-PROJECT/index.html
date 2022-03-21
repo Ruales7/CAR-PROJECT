@@ -16,27 +16,45 @@
 
     var canvas= document.getElementById('rrcar');
 	var ctx= canvas.getContext('2d');
+    var grdLinear1=ctx.createLinearGradient (0,0,0, 450);
+        grdLinear1.addColorStop(0, '#fa8c16');
+        grdLinear1.addColorStop(0.2, '#ff860d');
+        grdLinear1.addColorStop(0.5, '#f7f020');
+        grdLinear1.addColorStop(1, '#ffef0f');
+    
+    var grdLinear2=ctx.createLinearGradient (0,0,0, 800);
+        grdLinear2.addColorStop(0, 'black');
+        grdLinear2.addColorStop(0.4, '#303030');
+        grdLinear2.addColorStop(0.97, '#595959');
+        grdLinear2.addColorStop(1, '#595c5a');
 
-    			
-
-    ctx.fillStyle='#4f93db';
+        
+    var grdLinear=ctx.createLinearGradient (0,0,0,500);
+    var img = new Image();
+    var img1 = new Image();
+    var img2 = new Image();
+    
+    grdLinear.addColorStop(0, '#2d75eb');
+    grdLinear.addColorStop(0.15, '#6ea5ff');
+    grdLinear.addColorStop(0.3, '#99dbff');
+    grdLinear.addColorStop(0.5, '#f7b36a');
+    grdLinear.addColorStop(0.7, '#ffac4d');
+    grdLinear.addColorStop(1, '#fc9117');
+    
+    ctx.fillStyle= grdLinear;
 	ctx.beginPath();
 	ctx.fillRect(0,0,1900,350);
 	ctx.stroke();
 	ctx.fill();
 
-    //ctx.fillStyle='black';
-	//ctx.beginPath();
-	//ctx.fillRect(800,350,300,650);
-	//ctx.stroke();
-	//ctx.fill();
-
-    ctx.strokeStyle = 'orange';
-    ctx.fillStyle= 'yellow';
+    ctx.fillStyle= grdLinear1;
     ctx.beginPath();
-	ctx.arc(950,290,195,0,2*3.14);
+	ctx.arc(945,290,195,0,2*3.14);
 	ctx.stroke();
 	ctx.fill();
+
+    
+
 
     ctx.fillStyle='green';
 	ctx.beginPath();
@@ -44,20 +62,36 @@
 	ctx.strokeRect(0,350,1900,945);
 
 
-    ctx.fillStyle='black';
+    ctx.fillStyle= grdLinear2;
     ctx.lineWidth = 4;
     ctx.beginPath();
     ctx.moveTo(850,350);
     ctx.lineTo(300,950);
-    
     ctx.lineTo(1600,950);
-    
     ctx.lineTo(1050,350);
-    
     ctx.lineTo(1050,350);
     ctx.stroke();
     ctx.fill();
 
+    img.onload = function(){
+        ctx.shadowBlur=20;
+        ctx.shadowColor = 'black';
+        ctx.drawImage(img, 1520, 90, 150, 90);
+    }
+    img.src="img/heli.png";
+
+    img1.onload = function(){
+        ctx.drawImage(img1, 980, 710 , 400, 235);
+    }
+    img1.src="img/carin.png";
+
+    img2.onload = function(){
+        ctx.drawImage(img2, 770, 400 , 155, 110);
+    }
+    img2.src="img/carro1.png";
+
+
+  
 
     </script>
 </html>
