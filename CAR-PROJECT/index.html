@@ -27,18 +27,43 @@
         grdLinear2.addColorStop(0.4, '#303030');
         grdLinear2.addColorStop(0.97, '#595959');
         grdLinear2.addColorStop(1, '#595c5a');
+    
+    // faixa da pista
+    ctx.strokeStyle = "Yellow";
+    ctx.fillStyle = "Yellow";
+    ctx.beginPath();
+    ctx.moveTo();
+    ctx.lineTo();
+    ctx.lineTo(8);
+    ctx.lineTo();
+    ctx.lineTo();
+    contexto.fill();
+    contexto.stroke();
 
+    ctx.strokeStyle = "Yellow";
+    ctx.fillStyle = "Yellow";
+    ctx.beginPath();
+    ctx.moveTo();
+    ctx.lineTo();
+    ctx.lineTo(8);
+    ctx.lineTo();
+    ctx.lineTo();
+    contexto.fill();
+    contexto.stroke();
         
     var grdLinear=ctx.createLinearGradient (0,0,0,500);
     var img = new Image();
     var img1 = new Image();
     var img2 = new Image();
+    var img3 = new Image();
+    var img4 = new Image();
+    var img5 = new Image();
     
-    grdLinear.addColorStop(0, '#2d75eb');
-    grdLinear.addColorStop(0.15, '#6ea5ff');
-    grdLinear.addColorStop(0.3, '#99dbff');
-    grdLinear.addColorStop(0.5, '#f7b36a');
-    grdLinear.addColorStop(0.7, '#ffac4d');
+    grdLinear.addColorStop(0, '#284feb');
+    grdLinear.addColorStop(0.15, '#287ceb');
+    grdLinear.addColorStop(0.3, '#3199de');
+    grdLinear.addColorStop(0.5, '#31c1de');
+    grdLinear.addColorStop(0.7, '#92f0ee');
     grdLinear.addColorStop(1, '#fc9117');
     
     ctx.fillStyle= grdLinear;
@@ -53,14 +78,16 @@
 	ctx.stroke();
 	ctx.fill();
 
-    
-
-
-    ctx.fillStyle='green';
+    var grdLinear3=ctx.createLinearGradient (0,350,0, 945);
+        grdLinear3.addColorStop(0, '#158C06');
+        grdLinear3.addColorStop(0.4, '#1BB007');
+        grdLinear3.addColorStop(0.97, '#1FCC08');
+        grdLinear3.addColorStop(1, '#24ED09');
+    ctx.fillStyle=grdLinear3;
 	ctx.beginPath();
 	ctx.fillRect(0,350,1900,945);
 	ctx.strokeRect(0,350,1900,945);
-
+    ctx.fill();
 
     ctx.fillStyle= grdLinear2;
     ctx.lineWidth = 4;
@@ -76,19 +103,38 @@
     img.onload = function(){
         ctx.shadowBlur=20;
         ctx.shadowColor = 'black';
-        ctx.drawImage(img, 1520, 90, 150, 90);
+        ctx.globalAlpha = '1';
+        ctx.drawImage(img, 1590, 130, 190, 110);
     }
     img.src="img/heli.png";
 
     img1.onload = function(){
-        ctx.drawImage(img1, 980, 710 , 400, 235);
+        ctx.drawImage(img1, 940, 685 , 520, 300);
     }
     img1.src="img/carin.png";
 
     img2.onload = function(){
-        ctx.drawImage(img2, 770, 400 , 155, 110);
+        ctx.drawImage(img2, 770, 400 , 150, 105);
     }
     img2.src="img/carro1.png";
+    
+    img3.onload = function(){
+        ctx.globalAlpha = '0.8';
+        ctx.drawImage(img3, 600, 205 , 220, 100);
+    }
+    img3.src="img/nuvem.png";
+
+    img4.onload = function(){
+        ctx.globalAlpha = '0.8';
+        ctx.drawImage(img4, 1200 , 90 , 250, 100);
+    }
+    img4.src="img/nuvem2.png";
+
+    img5.onload = function(){
+        ctx.globalAlpha = '0.8';
+        ctx.drawImage(img5, 160 , 100 , 230, 120);
+    }
+    img5.src="img/nuvem3.png";
 
 
   
